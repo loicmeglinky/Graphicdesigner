@@ -1,0 +1,83 @@
+<!--
+    - Les cases à cocher : checkbox
+    - Les zones d'options (cases d'options) : radio
+    - Les  listes déroulantes : choisir dans une liste
+-->
+
+<div class="container">
+<form action="traitement.php" method="POST">
+    <fieldset>
+        <legend>Remplisser ce formulaire.</legend>
+    
+        <label>Prénom</label>:
+        <!-- ZONE DE SAISIE MONOLIGNE-->
+        <input type="text" name="prenom" required autofocus size="30" placeholder="Exemple : Nicolas">
+        </input>
+    </p>
+
+
+<!-- ZONE DE SAISIE MULTILIGNE-->
+<p>
+<label>Description
+</label> : </p><br/>
+<textarea name="description" rows="5"></textarea>
+    </p>
+
+
+
+<!-- LES CASES A COCHER -->
+
+<p>
+<label>Quel est votre plat préféré ?
+</label></br>
+<input type="checkbox" name="Carbonara" checked>
+<label for="carbonara">Carbonara</label>
+
+<input type="checkbox" name="crêpes">
+<label for="crêpes">Crêpes</label>
+</p>
+
+<!-- LES CASES D'OPTIONS-->
+<p>
+    <label> Quel est votre plat préféré ?</label><br/>
+    <input type="radio" name="plat" value="carbonara">
+    <label for="carbonara">Carbonara</label><br />
+    <input type="radio" name="plat" value="crêpes">
+    <label for="crêpes">Crêpes</label>
+</p>
+
+
+<!-- LES LISTES DEROULANTES-->
+
+<p>
+<label> Quel est votre plat préféré</label><br/>
+<select name="plat">
+    <optgroup label="Plats froids">
+            <option value="huitres">Huitres</option>
+    </optgroup>
+    <optgroup label="Plats chauds">
+            <option value="carbonara">Carbonara</option>
+            <option value="crêpes" selected>Crêpes</option>
+
+    </optgroup>
+
+
+</select>
+</p>
+
+<label for="Quelle carte bleue avez-vous ?">
+    Quelle carte bleue avez-vous ?
+</label>
+<input type="text" list="cartes" name="cards">
+<datalist id="cartes">
+    <option value="Visa classique">
+    <option value="Visa premiere">
+    <option value="Visa black">
+   
+</datalist>
+<p>
+    <input type="submit"
+value="Envoyer">
+<input type="reset" value="Réinitialiser"> </p>
+</fieldset>
+</form>
